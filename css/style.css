@@ -404,7 +404,7 @@ pre .deletion {
   display: inline-block;
   width: 18px;
   height: 17px;
-  background: url("images/icon-reorder@2x.png") no-repeat 0 0;
+  background: url("../images/icon-reorder@2x.png") no-repeat 0 0;
   -webkit-background-size: 18px 17px;
   -moz-background-size: 18px 17px;
   background-size: 18px 17px;
