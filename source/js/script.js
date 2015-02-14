@@ -1,40 +1,40 @@
-(function($){
+(function($) {
   // Search
   var $searchWrap = $('#search-form-wrap'),
     isSearchAnim = false,
     searchAnimDuration = 200;
 
-  var startSearchAnim = function(){
+  var startSearchAnim = function() {
     isSearchAnim = true;
   };
 
-  var stopSearchAnim = function(callback){
-    setTimeout(function(){
+  var stopSearchAnim = function(callback) {
+    setTimeout(function() {
       isSearchAnim = false;
       callback && callback();
     }, searchAnimDuration);
   };
 
-  $('#nav-search-btn').on('click', function(){
+  $('#nav-search-btn').on('click', function() {
     if (isSearchAnim) return;
 
     startSearchAnim();
     $searchWrap.addClass('on');
-    stopSearchAnim(function(){
+    stopSearchAnim(function() {
       $('.search-form-input').focus();
     });
   });
 
-  $('.search-form-input').on('blur', function(){
+  $('.search-form-input').on('blur', function() {
     startSearchAnim();
     $searchWrap.removeClass('on');
     stopSearchAnim();
   });
 
   // Share
-  // $('body').on('click', function(){
+  // $('body').on('click', function() {
   //   $('.article-share-box.on').removeClass('on');
-  // }).on('click', '.article-share-link', function(e){
+  // }).on('click', '.article-share-link', function(e) {
   //   e.stopPropagation();
 
   //   var $this = $(this),
@@ -43,10 +43,10 @@
   //     id = 'article-share-box-' + $this.attr('data-id'),
   //     offset = $this.offset();
 
-  //   if ($('#' + id).length){
+  //   if ($('#' + id).length) {
   //     var box = $('#' + id);
 
-  //     if (box.hasClass('on')){
+  //     if (box.hasClass('on')) {
   //       box.removeClass('on');
   //       return;
   //     }
@@ -74,11 +74,11 @@
   //     top: offset.top + 25,
   //     left: offset.left
   //   }).addClass('on');
-  // }).on('click', '.article-share-box', function(e){
+  // }).on('click', '.article-share-box', function(e) {
   //   e.stopPropagation();
-  // }).on('click', '.article-share-box-input', function(){
+  // }).on('click', '.article-share-box-input', function() {
   //   $(this).select();
-  // }).on('click', '.article-share-box-link', function(e){
+  // }).on('click', '.article-share-box-link', function(e) {
   //   e.preventDefault();
   //   e.stopPropagation();
 
@@ -86,8 +86,8 @@
   // });
 
   // Caption
-  $('.entry-content').each(function(i){
-    $(this).find('img').each(function(){
+  $('.entry-content').each(function(i) {
+    $(this).find('img').each(function() {
       if ($(this).parent().hasClass('fancybox')) return;
 
       var alt = this.alt;
@@ -95,12 +95,12 @@
       $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
     });
 
-    $(this).find('.fancybox').each(function(){
+    $(this).find('.fancybox').each(function() {
       $(this).attr('rel', 'article' + i);
     });
   });
 
-  if ($.fancybox){
+  if ($.fancybox) {
     $('.fancybox').fancybox();
   }
 

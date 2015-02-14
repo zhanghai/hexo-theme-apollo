@@ -7,11 +7,11 @@ var rUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:ww
 *   {% fancybox /path/to/image [/path/to/thumbnail] [title] %}
 */
 
-hexo.extend.tag.register('fancybox', function(args){
+hexo.extend.tag.register('fancybox', function(args) {
   var original = args.shift(),
     thumbnail = '';
 
-  if (args.length && rUrl.test(args[0])){
+  if (args.length && rUrl.test(args[0])) {
     thumbnail = args.shift();
   }
 

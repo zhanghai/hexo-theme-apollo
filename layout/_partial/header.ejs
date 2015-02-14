@@ -7,9 +7,9 @@
 	</h1>
 	<nav class="nav">
 		<ul>
-			<% for (var i in theme.menu){ %><li><a href="<%- theme.menu[i] %>"><%= i %></a></li><% } %>
+			<% for (var i in theme.menu) { %><li><a href="<%- theme.menu[i] %>"><%= i %></a></li><% } %>
 			<li><a id="nav-search-btn" class="nav-icon" title="<%- __('index.search') %>"></a></li>
-			<% if (theme.rss){ %><li><a href="<%- theme.rss %>" id="nav-rss-link" class="nav-icon" title="<%- __('index.feed') %>"></a></li><% } %>
+			<% if (theme.rss) { %><li><a href="<%- theme.rss %>" id="nav-rss-link" class="nav-icon" title="<%- __('index.feed') %>"></a></li><% } %>
 		</ul>
 	</nav>
 	<div id="search-form-wrap">
