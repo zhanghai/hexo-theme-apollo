@@ -6,7 +6,7 @@
 </div>
 <footer id="footer">
   <h1 class="footer-blog-title">
-    <a href="<%- config.root %>"><%= config.title %></a>
+    <a href="<%- url_for() %>"><%= config.title %></a>
   </h1>
   <span class="copyright">
     &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
