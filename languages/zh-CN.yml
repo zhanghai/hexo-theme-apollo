@@ -1,0 +1,13 @@
+index:
+  archives: 存档
+  archives_year: 存档：%s
+  archives_month: 存档：%s / %s
+  category: 分类：%s
+  tag: 标签：%s
+  search: 搜索
+  feed: RSS 订阅
+
+article:
+  comments: 评论
+  no_title: （无标题）
+  read_more: 继续阅读

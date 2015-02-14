@@ -1,15 +1,15 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="post">
-	<footer class="entry-meta-header">
+	<header class="entry-meta-header">
 		<span class="meta-elements date">
-			<%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+			<%- partial('post/date', {class_name: 'article-date', date_format: config.date_format}) %>
 		</span>
 		<span class="meta-elements author"><%= config.author %></span>
 		<div class="commentscount">
 			<% if (post.comments && config.disqus_shortname){ %>
-				<a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+				<a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('article.comments') %></a>
 			<% } %>
 		</div>
-	</footer>
+	</header>
 	<%- partial('post/gallery') %>
 	<header class="entry-header">
 		<%- partial('post/title', {class_name: 'article-title'}) %>
@@ -17,14 +17,14 @@
 	<div class="entry-content">
 		<% if (post.excerpt && index){ %>
 			<%- post.excerpt %>
-			<% if (theme.excerpt_link){ %>
-				<p class="article-more-link">
-					<a href="<%- config.root %><%- post.path %>#more"><%= theme.excerpt_link %></a>
+			<% if (theme.more_link){ %>
+				<p class="more">
+					<a href="<%- config.root %><%- post.path %>#more"><%= __('article.read_more') %></a>
 				</p>
-      <% } %>
-    <% } else { %>
-    	<%- post.content %>
-    <% } %>
+			<% } %>
+		<% } else { %>
+			<%- post.content %>
+		<% } %>
 	</div>
 	<footer class="entry-footer">
 		<div class="entry-meta-footer">
@@ -37,18 +37,18 @@
 		</div>
 	</footer>
 	<% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
+		<%- partial('post/nav') %>
+	<% } %>
 </article>
 
 <% if (index){ %>
-	<hr class="article-devider">
+	<hr class="article-divider">
 <% } %>
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
+	<section id="comments">
+		<div id="disqus_thread">
+			<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
 <% } %>

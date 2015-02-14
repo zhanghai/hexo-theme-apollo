@@ -1,12 +1,12 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  主页: /
+  存档: /archives
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
 fancybox: true
+more_link: true
 
 # Miscellaneous
 google_analytics:

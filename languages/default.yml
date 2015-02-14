@@ -1,0 +1,13 @@
+index:
+  archives: Archives
+  archives_year: "Archives: %s"
+  archives_month: "Archives: %s / %s"
+  category: "Category：%s"
+  tag: "Tag: %s"
+  search: Search
+  feed: RSS Feed
+
+article:
+  comments: Comments
+  no_title: (No Title)
+  read_more: Read more
