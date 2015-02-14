@@ -1,7 +1,7 @@
-<% if (config.disqus_shortname){ %>
+<% if (config.disqus_shortname) { %>
 <script>
   var disqus_shortname = '<%= config.disqus_shortname %>';
-  <% if (page.permalink){ %>
+  <% if (page.permalink) { %>
   var disqus_url = '<%= page.permalink %>';
   <% } %>
   (function(){
@@ -16,9 +16,9 @@
 
 <script src="//cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
 
-<% if (theme.fancybox){ %>
-<link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="<%- config.root %>fancybox/jquery.fancybox.pack.js"></script>
+<% if (theme.fancybox) { %>
+<link rel="stylesheet" href="<%- url_for('fancybox/jquery.fancybox.css') %>" media="screen" type="text/css">
+<script src="<%- url_for('fancybox/jquery.fancybox.pack.js') %>"></script>
 <% } %>
 
 <%- js('js/script') %>
