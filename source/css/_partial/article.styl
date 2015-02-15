@@ -71,7 +71,7 @@
       &:hover
         color: color-link
   p
-    margin: 0 0 1em 0
+    margin: 0.5em 0
   img, video
     max-width: 100%
     height: auto
@@ -107,19 +107,27 @@
       margin-bottom: 0
 
   table
-    margin: 0
+    margin: 0.5em 0 1em 0
     width: auto
     border-collapse: collapse
     border-spacing: 0
 
+  thead
+    tr
+      border-bottom: 3px solid color-border
+
+  tbody
+    tr
+      border-bottom: 1px solid color-border
+
   th
     font-weight: bold
-    border-bottom: 3px solid color-border
-    padding-bottom: 0.5em
-
-  td
-    border-bottom: 1px solid color-border
-    padding: 10px 0
+  th, td
+    padding: 0.25em 1em 0.25em 1em
+  th:first-child, td:first-child
+    padding-left: 0
+  th:last-child, td:last-child
+    padding-right: 0
 
   blockquote
     margin: 1.5em 3em
