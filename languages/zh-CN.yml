@@ -6,8 +6,12 @@ index:
   tag: 标签：%s
   search: 搜索
   feed: RSS 订阅
+  previous: « 上一页
+  next: 下一页 »
 
 article:
   comments: 评论
   no_title: （无标题）
   read_more: 继续阅读
+  newer: 下一篇
+  older: 上一篇

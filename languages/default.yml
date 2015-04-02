@@ -6,8 +6,12 @@ index:
   tag: "Tag: %s"
   search: Search
   feed: RSS Feed
+  previous: « Prev
+  next: Next »
 
 article:
   comments: Comments
   no_title: (No Title)
   read_more: Read more
+  newer: Newer
+  older: Older
