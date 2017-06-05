@@ -9,5 +9,5 @@ fancybox: true
 more_link: true
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-100427567-2
 favicon: /favicon.png
