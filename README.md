@@ -1,29 +1,29 @@
-Hexo theme: Apollo
-=================
+# Hexo theme: Apollo
 
 **This hexo theme is modified from SANOGRAPHIX.NET**
 
-[Original](https://github.com/sanographix/tumblr/tree/master/apollo) (Tumblr theme)
-[Demo](http://joyceim.github.io/hexo-theme-apollo)
+Original (Tumblr theme): https://github.com/sanographix/tumblr/tree/master/apollo
 
-##Installation
+Demo: https://blog.zhanghai.me/
 
-###Install
+## Integration
+
+### Install
 
 ``` bash
-$ git clone git@github.com:joyceim/hexo-theme-apollo.git themes/apollo
+$ git submodule add git@github.com:zhanghai/hexo-theme-apollo.git themes/apollo
 ```
 
 **Apollo requires Hexo 2.4 and above.**
 
-###Update
+### Update
 
 ``` bash
 cd themes/apollo
 git pull
 ```
 
-##Configuration
+## Configuration
 
 ``` yml
 # Header
