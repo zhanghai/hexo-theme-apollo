@@ -10,3 +10,14 @@ ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
 <% } %>
+<% if (theme.google_analytics_4) { %>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics_4 %>"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '<%= theme.google_analytics_4 %>');
+</script>
+<!-- End Google Analytics 4 -->
+<% } %>

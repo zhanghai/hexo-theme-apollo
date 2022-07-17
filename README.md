@@ -46,4 +46,5 @@ favicon: /favicon.png
 - **more_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
 - **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 - **google_analytics** - Google Analytics ID
+- **google_analytics_4** - Google Analytics 4 ID
 - **favicon** - Favicon path
